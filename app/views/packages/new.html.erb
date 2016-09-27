@@ -1,0 +1,32 @@
+<% provide(:title, 'Sign up') %>
+<h1>Package info</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@package) do |f| %>
+    <%= render 'shared/error_messages_for_package' %>
+      <%= f.label :Name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :Email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :Phone %>
+      <%= f.text_field :phone, class: 'form-control' %>
+
+      <%= f.label :Address %>
+      <%= f.text_field :address, class: 'form-control' %>
+      
+      <%= f.label :Pickup_time %>
+      <%= f.datetime_select :pickup_time, class: 'form-control' %>
+      
+      <%= f.label :Package_type %>
+      <%= f.text_field :package_type, class: 'form-control' %>
+      
+      <%= f.label :Weight %>
+      <%= f.text_field :weight, class: 'form-control' %>
+
+      <%= f.submit "Confirm", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
